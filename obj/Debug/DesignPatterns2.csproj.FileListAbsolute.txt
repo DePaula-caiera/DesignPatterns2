@@ -1,0 +1,7 @@
+C:\Users\caiod\Cursos_C#\source\C#\Udemy\DesignPatterns\DesignPatterns2\bin\Debug\DesignPatterns2.exe.config
+C:\Users\caiod\Cursos_C#\source\C#\Udemy\DesignPatterns\DesignPatterns2\bin\Debug\DesignPatterns2.exe
+C:\Users\caiod\Cursos_C#\source\C#\Udemy\DesignPatterns\DesignPatterns2\bin\Debug\DesignPatterns2.pdb
+C:\Users\caiod\Cursos_C#\source\C#\Udemy\DesignPatterns\DesignPatterns2\obj\Debug\DesignPatterns2.csproj.AssemblyReference.cache
+C:\Users\caiod\Cursos_C#\source\C#\Udemy\DesignPatterns\DesignPatterns2\obj\Debug\DesignPatterns2.csproj.CoreCompileInputs.cache
+C:\Users\caiod\Cursos_C#\source\C#\Udemy\DesignPatterns\DesignPatterns2\obj\Debug\DesignPatterns2.exe
+C:\Users\caiod\Cursos_C#\source\C#\Udemy\DesignPatterns\DesignPatterns2\obj\Debug\DesignPatterns2.pdb
