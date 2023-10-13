@@ -2,6 +2,7 @@
 using DesignPatterns2.Cap2;
 using DesignPatterns2.Cap3;
 using DesignPatterns2.Cap4;
+using DesignPatterns2.Cap5;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -58,18 +59,37 @@ namespace DesignPatterns2
             //IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
             //IExpressao soma = new Soma(esquerda, direita);
 
-            //Expression
             //Console.WriteLine(soma.Avalia());
+
+            //Expression            
             //Expression soma = Expression.Add(Expression.Constant(10), Expression.Constant(100));
             //Func<int> funcao = Expression.Lambda<Func<int>>(soma).Compile();
             //Console.WriteLine(funcao());
 
             // DIVISÃO: (10 / 5)
-            IExpressao esquerda = new Numero(10);
-            IExpressao direita = new Numero(5);
-            IExpressao multiplicacao = new Multiplicacao(esquerda, direita);
-            
-            
+            //IExpressao esquerda = new Numero(10);
+            //IExpressao direita = new Numero(5);
+            //IExpressao divisao = new Divisao(esquerda, direita);
+
+            //Console.WriteLine(divisao.Avalia());
+
+            // MULTIPLICACAO: (10 * 60)
+            //IExpressao esquerda = new Numero(10);
+            //IExpressao direita = new Numero(60);
+            //IExpressao multiplicacao = new Multiplicacao(esquerda, direita);
+
+            //Console.WriteLine(multiplicacao.Avalia());
+
+            // CAP 5
+            IExpressao esquerda = new Soma(new Soma(new Numero(1), new Numero(100)), new Numero(10));
+            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            IExpressao soma = new Soma(esquerda, direita);
+
+            Console.WriteLine(soma.Avalia());
+            ImpressoraVisitor impressora = new ImpressoraVisitor();
+            soma.Aceita(impressora);
+
+
         }
     }
 }
