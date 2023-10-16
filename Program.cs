@@ -3,11 +3,16 @@ using DesignPatterns2.Cap2;
 using DesignPatterns2.Cap3;
 using DesignPatterns2.Cap4;
 using DesignPatterns2.Cap5;
+using DesignPatterns2.Cap6;
+using DesignPatterns2.Cap7;
+using DesignPatterns2.Cap8;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq.Expressions;
+using System.Xml.Serialization;
 
 namespace DesignPatterns2
 {
@@ -81,15 +86,44 @@ namespace DesignPatterns2
             //Console.WriteLine(multiplicacao.Avalia());
 
             // CAP 5
-            IExpressao esquerda = new Soma(new Soma(new Numero(1), new Numero(100)), new Numero(10));
-            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
-            IExpressao soma = new Soma(esquerda, direita);
+            //IExpressao esquerda = new Soma(new Soma(new Numero(1), new Numero(100)), new Numero(10));
+            //IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            //IExpressao soma = new Soma(esquerda, direita);
 
-            Console.WriteLine(soma.Avalia());
-            ImpressoraVisitor impressora = new ImpressoraVisitor();
-            soma.Aceita(impressora);
+            //Console.WriteLine(soma.Avalia());
+            //ImpressoraVisitor impressora = new ImpressoraVisitor();
+            //soma.Aceita(impressora);
 
+            // CAP 6
+            //IMensagem mensagem = new MensagemCliente("Rony");
+            //IEnviador enviador = new EnviaPorSMS();
+            //mensagem.Enviador = enviador;
+            //mensagem.Envia();
 
+            // CAP 7
+            //FilaDeTrabalho fila = new FilaDeTrabalho();
+            //Pedido pedido1 = new Pedido("Carlos", 150.0);
+            //Pedido pedido2 = new Pedido("Rafaela", 50.0);
+            
+            //fila.Adiciona(new PagaPedido(pedido1));
+            //fila.Adiciona(new PagaPedido(pedido2));
+
+            //fila.Adiciona(new FinalizaPedido(pedido1));
+            //fila.Adiciona(new FinalizaPedido(pedido2));
+
+            //fila.Processa();
+
+            // CAP 8
+
+            Cliente cliente = new Cliente();
+
+            cliente.Nome = "Rafael Marques";
+            cliente.Endereco = "Rua Rei dos Clássicos";
+            cliente.DataNascimento = DateTime.Now;
+
+            String xml = new GeradorXml().GeraXml(cliente);
+
+            Console.WriteLine(xml);
         }
     }
 }
