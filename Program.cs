@@ -6,6 +6,7 @@ using DesignPatterns2.Cap5;
 using DesignPatterns2.Cap6;
 using DesignPatterns2.Cap7;
 using DesignPatterns2.Cap8;
+using DesignPatterns2.Cap9;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -104,7 +105,7 @@ namespace DesignPatterns2
             //FilaDeTrabalho fila = new FilaDeTrabalho();
             //Pedido pedido1 = new Pedido("Carlos", 150.0);
             //Pedido pedido2 = new Pedido("Rafaela", 50.0);
-            
+
             //fila.Adiciona(new PagaPedido(pedido1));
             //fila.Adiciona(new PagaPedido(pedido2));
 
@@ -114,16 +115,24 @@ namespace DesignPatterns2
             //fila.Processa();
 
             // CAP 8
+            //Cliente cliente = new Cliente();
 
-            Cliente cliente = new Cliente();
+            //cliente.Nome = "Rafael Marques";
+            //cliente.Endereco = "Rua Rei dos Clássicos";
+            //cliente.DataNascimento = DateTime.Now;
 
-            cliente.Nome = "Rafael Marques";
-            cliente.Endereco = "Rua Rei dos Clássicos";
-            cliente.DataNascimento = DateTime.Now;
+            //String xml = new GeradorXml().GeraXml(cliente);
 
-            String xml = new GeradorXml().GeraXml(cliente);
+            //Console.WriteLine(xml);
 
-            Console.WriteLine(xml);
+            // CAP 9
+            //APENAS EXEMPLO
+            //String cpf = "0122334455";
+            //EmpresaFacade facade = new EmpresaFacadeSingleton().Instancia;
+            //Cliente cliente = facade.BuscaCliente(cpf);
+
+            //var fatura =  facade.criaFatura(cliente, 5000);
+            //facade.GeraCobranca(tipo.Boleto, fatura);
         }
     }
 }
